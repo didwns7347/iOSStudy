@@ -13,12 +13,13 @@ class NewsListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //WebService().getArticlesUsingAF()
         setup()
     }
     
     private func setup() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         self.articleListVM  = ArticleListViewModel{ (result) in
             if result{
                 DispatchQueue.main.async {

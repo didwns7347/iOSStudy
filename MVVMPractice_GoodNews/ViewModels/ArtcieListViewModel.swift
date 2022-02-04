@@ -12,7 +12,7 @@ class ArticleListViewModel {
     var articles: [Article] = [Article]()
     
     init(_ callback:@escaping(Bool) -> ()){
-        WebService().getArticles{ (articles) in
+        WebService().getArticlesUsingAF{ (articles) in
             if let articles = articles {
                 self.articles = articles
                 callback(true)
